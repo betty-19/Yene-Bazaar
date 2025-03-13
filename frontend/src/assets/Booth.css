@@ -1,0 +1,12 @@
+.booth-wrapper .booth h1{
+    margin-top:20px;
+   }
+   .buttons{
+margin-bottom:25px;
+   }
+  
+  @media (max-width: 350px){
+   .booth .form {
+      margin-inline: 20px;
+   }
+  } 

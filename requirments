@@ -1,0 +1,13 @@
+## we have to install them to run the website in the frontend folder
+npm create vite@latest - to create the react app for the first time
+npm install - to install node moudules in the app for the first time
+npm install react-router-dom
+npm install bootstrap
+npm install bootstrap-icons
+npm install antd --save - to use sidebar
+npm install file-saver - to save files in registrationDetail.jsx
+npm install axios - to fetch api
+
+## backend
+npm install express
+npm install cors mysql multer nodemon body-parser bcrypt axios

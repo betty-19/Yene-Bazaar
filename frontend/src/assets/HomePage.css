@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Alfa+Slab+One&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* background-color:#797c7e00 ; */
+   
+  }
+  header {
+    /* rgba(255, 217, 0, 0.445); */
+      background-color: #001529;
+      width: 100%;
+      
+    }
+    
+    nav {
+      padding: 2% 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav p{
+      font-size:28px;
+      font-weight: 500;
+      margin:0;
+      padding: 0;
+      color:white;
+    }
+    nav p span{
+      font-size:36px;
+      font-weight: 700;
+      background-color: gold;
+      margin-right: 10px;
+      padding:3px 10px;
+      border-radius:20px;
+      color:#001529;
+    }
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 0; 
+      margin: 0; 
+    }
+    
+    .ni {
+      list-style-type: none; 
+      font-size:15px;
+      cursor: pointer; 
+      transition: all 0.5s ease-in-out;
+      font-weight: 500;
+   
+      color:white;
+     
+    }
+    #home{
+      color:gold;
+    }
+    .nav-item i {
+      margin-right: 5px; 
+    }
+    .nav-item a{
+      text-decoration: none;
+      color:#fff; 
+        transition: all 0.5s ease-in-out;
+    font-weight: 500;}
+    .menu-icon{
+      display:none;
+      font-size: 24px;
+      cursor:pointer;
+      color:gold;
+    }
+    
+    .nav-item a:hover, #signup:hover {
+      color: #001529; 
+      padding:10px 15px;
+      background-color: gold;
+      border-radius:15px;
+    }
+    .home-img{
+        width: 100%;
+        /* background-color: black; */
+        /* height: auto; */
+    }
+    .home-img img{
+        background-size: cover;
+        background-position: center;
+        height: auto;
+        width: 100%;
+    }
+    .about,.contact,.services, .testimonials{
+      margin-top:50px;
+      padding:20px;
+      text-align: center;
+      margin-bottom:50px;
+     
+    }
+    .about h2, .contact h2{
+      font-size:40px;
+      font-weight: 500;
+      /* text-align: center; */
+    }
+    .services h1, .testimonials h1{
+      margin-bottom:50px;
+    }
+    .about p{
+      font-size:20px;
+      font-weight: 350;
+      /* text-align: center; */
+    }
+
+/* Services Section */
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  
+}
+
+.service-card {
+  background-color: #001529;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color:gold;
+  box-shadow: 3px 2px 20px #001529;
+}
+
+
+/* Testimonials Section */
+.testimonial-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  
+}
+
+.testimonial-card {
+  background-color: #001529;
+  color:gold;
+  padding: 15px;
+  border-radius: 10px;
+  width: 40%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 2px 20px #001529;
+}
+    .social-media{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap:30px;
+      flex-wrap:wrap;
+    }
+    .social-media div{
+      margin-top:30px;
+      width: 70px;
+      height: 70px;
+      border-radius:50%;
+      background-color: #001529;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.39);
+      cursor:pointer;
+      transition:all  0.5s ease-in-out;
+    }
+    .social-media div:hover{
+      transform: translateY(-10px);
+    }
+    .social-media div i{
+      font-size:28px;
+      /* rgb(243, 141, 9) */
+     color: rgb(255, 217, 0);
+    }
+    footer{
+      margin-top:30px;
+      background-color: #001529;
+      color:gold;
+      margin-bottom:0;
+      height: auto;
+      text-align: center;
+      font-size:20px;
+      padding: 2% 3%;
+  
+    }
+/*   
+    Menu:hover{
+      background-color: #001529;
+      color:gold;
+    } */
+  
+    
+    @media (max-width: 982px) {
+      .nav-list {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        right: 0px;
+        background-color: #fff;
+        padding: 5%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .nav{
+        flex-wrap: wrap;
+      }
+    
+      .nav-list.open {
+        display: flex; 
+      }
+      .nav-item a, .ni{
+        color:#001529;
+        transition: all ease-in-out 0.5s;
+       text-align: center;     
+   
+      }
+      .nav-item a:hover,#signup:hover {
+        color: gold; 
+        /* padding:0px; */
+        background-color: #001529;
+       /* padding:10px 5px; */
+        /* width:100%; 
+         height: auto; */
+       
+        border-radius:10px;
+        
+       
+      }
+    
+      .menu-icon {
+        display: block; 
+      }
+     
+    }
+    @media (max-width: 328px){
+      .social-media{
+        gap:30px;
+        margin-top:20px;
+      }
+      
+      .social-media div{
+      margin:0;
+        width: 50px;
+        height: 50px;
+      
+      }
+      .social-media div i{
+        font-size:20px;
+      }
+      .about p{
+      font-size:16px;
+      font-weight: 400;
+      }
+      .about h2, .contact h2{
+        font-size:30px;
+        font-weight: 500;
+      }
+      footer{
+        font-size:15px;
+       
+      }
+      
+    }

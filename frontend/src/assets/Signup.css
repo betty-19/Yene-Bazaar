@@ -1,0 +1,103 @@
+
+.sl-wrapper,
+.detail-wrapper
+,.register-wrapper,.booth-wrapper
+{
+    /* background-color: #eedf5846; */
+    background-color: #fff;
+   
+    width: 100%;
+    height: 100vh;
+    margin:0;
+padding:0;
+display: flex;
+justify-content: center;
+align-items: center;
+ }
+.signup-login
+,.register,.booth
+ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    background-color: #001529;
+    color:#fff;
+   
+    border-radius: 25px;
+    /* rgb(172, 167, 165) */
+    box-shadow: 1px 2px 15px #001529;
+    color:#fff;
+    margin:5%;
+
+  }
+  .title{
+    margin:20px 0 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .title h1{
+    cursor:pointer;
+    padding:0;
+    margin:0;
+    transition:all .6s ease-in-out ;
+  }
+  .title h1:hover{
+    color: gold; 
+   
+  }
+  .title p{
+    padding:0;
+    margin:0 10px 0 10px;
+    font-size: 50px;
+    font-weight: 500;
+  }
+.mb-3 p{
+color:gold;
+}
+  .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:40px;
+    
+   
+  }
+  .buttons button{
+    padding:10px 30px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+
+  }
+  .buttons button:nth-child(2){
+    margin-left: 20px;
+    background-color: gold;
+    border-radius:10px;
+   
+  }
+  .buttons button:nth-child(1):hover{
+      background-color: #001529;
+      color:gold;
+  }
+  .buttons button:nth-child(1){
+    border:2px solid gold;
+    background-color: white;
+  }
+  .login-wrapper,.signup-wrapper{
+   
+   width: 60%;
+   margin-bottom:40px;
+
+  }
+ 
+
+ @media(max-width: 530px){
+  .signup-wrapper  .buttons button{
+    padding:10px;
+  }
+ }

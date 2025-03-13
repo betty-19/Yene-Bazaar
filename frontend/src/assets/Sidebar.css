@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Alfa+Slab+One&display=swap');
+* {
+    margin:0;
+    padding:0;
+    border:none;
+    outline:none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.sidebar{
+    color: #fff;
+    width: 250px; 
+    transition: width 0.3s ease; 
+    position: fixed;
+    left: -250px; 
+    background-color: #001529; 
+    z-index: 1000;
+}
+.sidebar.visible {
+    left: 0; 
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:10px;
+    /* width: 100%; */
+    
+}
+.icons{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ /* background-color: red; */
+ width:100%;
+ max-width: 500px;
+ display:"flex";
+ margin:"0";
+ color:"gold";
+ /* margin:10px 15px; */
+}
+.icons .logo-icon{
+    font-size: 1.5rem;
+    /* padding: 0; */
+    
+}
+/* .icons i{
+    display:none;
+} */
+.menu-bar{
+    height: 100vh;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    font-size:1rem;
+    position: relative;
+    transition: all 0.7s ease-in-out;
+}
+.menu-bar-icon {
+    display: flex; /* Ensure flexbox is used */
+    align-items: center; /* Vertically center the icon and text */
+    justify-content: space-between; /* Space around the icon and text */
+    padding: 10px 15px; /* Add some padding */
+    background-color: #001529; /* Background color */
+    width: 100%; /* Ensure it takes full width */
+    cursor: pointer; /* Add pointer cursor for better UX */
+
+
+
+    /* display: flex; 
+    justify-content: space-around;    
+    transition: all 0.7s ease-in-out;
+    color: #001529;
+    z-index: 1100;
+    cursor: pointer;
+    background-color: #001529; */
+}
+.menu-bar-icon p{
+    font-size:28px;
+    font-weight: 500;
+    margin:0;
+    padding: 0;
+    color:white;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    /* width: 300px; */
+  }
+   .menu-bar-icon p span{
+    font-size:36px;
+    font-weight: 700;
+    /* background-color: gold; */
+    margin-right: 10px;
+    padding:3px 10px;
+    border-radius:20px;
+    color:gold;
+  }
+
+.menuu-icon{
+  font-size: 32px;
+ color:#fff;
+ margin: 0; 
+ /* background-color: white; */
+}
+.content-area {
+    /* padding: 24px; */
+    background-color: #f0f2f5;
+    /* margin-left: 0; */
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    Menu{
+        background-color: #fff;
+    }
+    .sidebar {
+        width: 150px; 
+     
+    }
+
+    .menu-bar {
+        font-size: 0.8rem; 
+    }
+
+    .icons {
+       
+        font-size: 1.2rem;
+    }
+    .menu-bar-icon {
+        display: block; 
+    }
+    .content-area{
+        margin-left:0;
+    }
+    
+}
+
+@media (min-width: 769px) {
+    .sidebar {
+        left: 0; 
+        width: 250px;
+    }
+
+    .menu-bar-icon {
+        display: none; 
+    }
+
+    .content-area {
+        margin-left: 250px;
+    }
+}
+
+/* Media Query for Extra Small Screens */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100px; 
+    }
+
+    .menu-bar {
+        font-size: 0.7rem; 
+    }
+
+    .logo-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 1rem;
+    }
+    .menu-bar-icon p span{
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,100 @@
+.head {
+    display: flex;              /* Align children (arrow and heading) in a row */
+    align-items: center;        /* Vertically align the items */
+    justify-content: space-around;    /* Center the content */
+    /* position: relative;         Allows positioning the arrow on the left */
+    /* margin: 30px 0 30px 0px;       */
+  /* background-color: yellow; */
+  width: 100%;
+  flex-wrap: wrap;
+}
+  
+  .head i {
+    /* position: absolute;         Place the arrow independently on the left */
+         /* background-color: red;          */
+    font-size: 25px;            /* Adjust arrow size */
+    cursor: pointer;            /* Add a pointer cursor for interactivity */
+  /* margin-right: 10px; */
+  }
+  
+  .head h1 {
+ 
+    /* margin: 0 2%;   */
+/* background-color: black; */
+    /* text-align: center;          */
+    font-size: 32px;            /* Adjust heading font size as needed */
+    /* padding: 0; */
+  }
+  label{
+    font-size:1rem;
+  }
+  
+.detail-wrapper{
+    background-color:  #fff;
+   width: 100%;
+    height: 100%;
+    /* background-color: black; */
+ }
+ .signup-login,.register, .detail {  
+    /* max-width: 600px; */
+    width: 100%;
+    padding-top:50px; 
+    margin:5%;
+    /* background-color: yellow; */
+    padding: 10px;
+ 
+
+  }
+  .img-cl{
+    margin-bottom:20px;
+    display:block;
+  
+    flex-wrap: wrap;
+  }
+  
+.img-cl button{
+border: none;
+outline:none;
+border-radius: 10px;
+padding:5px 15px;
+background-color: transparent;
+border:gold 2px solid;
+color:black;
+transition: all ease-in-out .4s;
+margin:10px 0 20px 0;
+}
+.img-cl button:hover{
+background-color: gold;
+}
+.img-cl img{
+    width: 300px;
+    height: 250px;
+    /* margin-right: .5rem; */
+    border-radius:5%;
+    /* vertical-align: middle; */
+
+}
+
+@media (max-width:430px){
+  .img-cl img{
+    display:flex;
+    width: 200px;
+    height: 250px;
+}
+.head h1 {
+  font-size: 22px;         
+}
+.head i {
+  font-size: 22px;         
+}
+.detail{
+  /* margin-left:20px; */
+  padding:0px;
+  margin:0% 5%;
+}
+}
+@media (max-width:365px){
+  .head i {
+    font-size: 18px;         
+  }
+}
