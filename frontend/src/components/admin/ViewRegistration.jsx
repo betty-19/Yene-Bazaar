@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../assets/viewRegistration.css";
+import { baseUrl } from "../../util/constants";
 
 function ViewRegistration({ onViewDetail }) {
   const nav = useNavigate();
@@ -11,7 +12,7 @@ function ViewRegistration({ onViewDetail }) {
 
   // Fetch data from the API
   useEffect(() => {
-    fetch("http://localhost:3000/viewRegistration")
+    fetch(`${baseUrl}/viewRegistration`)
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log(err));

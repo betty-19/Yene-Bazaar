@@ -2,6 +2,7 @@ import React, { useState,useRef } from "react";
 import "../assets/Signup.css";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import { baseUrl } from "../util/constants";
 
 
 function Signup() {
@@ -28,7 +29,7 @@ function Signup() {
     const nameErrorMessage = document.getElementById("name-error");
     const usernameErrorMessage = document.getElementById("username-error");
     const passwordErrorMessage = document.getElementById("password-error");
-    const usernameApi = await axios.get("http://localhost:3000/usernames");
+    const usernameApi = await axios.get(`${baseUrl}/usernames`);
     const existingUsernames = usernameApi.data.map(user => user.username);
     if(signupValues.password !== signupValues.confirmPassword)
     {
@@ -59,7 +60,7 @@ function Signup() {
     try{
 
 
-      const response = await axios.post("http://localhost:3000/signup", signupValues);
+      const response = await axios.post(`${baseUrl}/signup`, signupValues);
       alert(response.data.message);
       if(response.status === 201){
           setSignupValues ({
@@ -86,7 +87,7 @@ function Signup() {
     console.log(loginValues);
     try{
       
-      const response = await axios.post("http://localhost:3000/login", loginValues);
+      const response = await axios.post(`${baseUrl}/login`, loginValues);
       const userRole = response.data.role;
       const username = response.data.username;
       const userId= response.data.user_id;

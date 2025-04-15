@@ -1,6 +1,7 @@
 import React, { useState,useEffect,useRef } from "react";
 import axios from "axios";
 import '../../assets/Booth.css';
+import { baseUrl } from "../../util/constants";
 
 function Booth() {
   const [formData, setFormData] = useState({
@@ -12,7 +13,7 @@ created_by:"",});
   const fileInputRef = useRef(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/boothImage")
+    fetch(`${baseUrl}/boothImage`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -52,7 +53,7 @@ data.append("eventName", formData.eventName);
 data.append("created_by",user_id);
 console.log(user_id);
     try {
-      const response = await axios.post("http://localhost:3000/booth", data, {
+      const response = await axios.post(`${baseUrl}/booth`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert(response.data);

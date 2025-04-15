@@ -9,6 +9,7 @@ import EventRegistration from './user/EventRegistration.jsx'
 import Detail from './admin/RegistrationDetail.jsx';
 import Booth from '../components/admin/Booth.jsx'
 import {FireFilled} from '@ant-design/icons';
+import { baseUrl } from '../util/constants.jsx';
 
 const {  Sider, Content } = Layout;
 

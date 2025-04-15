@@ -20,8 +20,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "123456",
-    database: "event"
+    password: "",
+    database: "yene_bazaar"
 });
 
 

@@ -28,7 +28,7 @@ function EventRegistration() {
  useEffect(() => {
   const fetchBoothImage = async () => {
     try {
-      const response = await fetch("http://localhost:3000/boothImage");
+      const response = await fetch(`${baseUrl}/boothImage`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -54,7 +54,7 @@ function EventRegistration() {
 
   const fetchSelectedBooth = async () => {
     try {
-      const response = await fetch("http://localhost:3000/selectedBooths");
+      const response = await fetch(`${baseUrl}/selectedBooths`);
       if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
       const result = await response.json();
@@ -129,7 +129,7 @@ const validateBooth = () => {
 
     try {
      data.append("created_by", userId);
-      const response = await fetch("http://localhost:3000/api/registered_events", {
+      const response = await fetch(`${baseUrl}/api/registered_events`, {
         method: "POST",
         body: data,
       });
