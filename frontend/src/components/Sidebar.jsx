@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Layout, theme } from 'antd'; // Import theme here
 import Logo from './Logo.jsx';
-import '../assets/sidebar.css';
+import '../assets/Sidebar.css';
 import { MenuOutlined} from '@ant-design/icons';
 import MenuList from './MenuList.jsx';
 import ViewRegistration from './admin/ViewRegistration.jsx';

@@ -12,7 +12,7 @@ function ViewRegistration({ onViewDetail }) {
 
   // Fetch data from the API
   useEffect(() => {
-    fetch(`${baseUrl}/viewRegistration`)
+    fetch(`${baseUrl}/api/viewRegistration`)
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log(err));

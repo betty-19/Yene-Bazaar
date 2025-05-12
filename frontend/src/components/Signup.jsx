@@ -29,7 +29,7 @@ function Signup() {
     const nameErrorMessage = document.getElementById("name-error");
     const usernameErrorMessage = document.getElementById("username-error");
     const passwordErrorMessage = document.getElementById("password-error");
-    const usernameApi = await axios.get(`${baseUrl}/usernames`);
+    const usernameApi = await axios.get(`${baseUrl}/api/usernames`);
     const existingUsernames = usernameApi.data.map(user => user.username);
     if(signupValues.password !== signupValues.confirmPassword)
     {
@@ -60,7 +60,7 @@ function Signup() {
     try{
 
 
-      const response = await axios.post(`${baseUrl}/signup`, signupValues);
+      const response = await axios.post(`${baseUrl}/api/signup`, signupValues);
       alert(response.data.message);
       if(response.status === 201){
           setSignupValues ({
@@ -87,7 +87,7 @@ function Signup() {
     console.log(loginValues);
     try{
       
-      const response = await axios.post(`${baseUrl}/login`, loginValues);
+      const response = await axios.post(`${baseUrl}/api/login`, loginValues);
       const userRole = response.data.role;
       const username = response.data.username;
       const userId= response.data.user_id;

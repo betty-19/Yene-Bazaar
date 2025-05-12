@@ -13,7 +13,7 @@ created_by:"",});
   const fileInputRef = useRef(null);
 
   useEffect(() => {
-    fetch(`${baseUrl}/boothImage`)
+    fetch(`${baseUrl}/api/boothImage`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -53,7 +53,7 @@ data.append("eventName", formData.eventName);
 data.append("created_by",user_id);
 console.log(user_id);
     try {
-      const response = await axios.post(`${baseUrl}/booth`, data, {
+      const response = await axios.post(`${baseUrl}/api/booth`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert(response.data);
